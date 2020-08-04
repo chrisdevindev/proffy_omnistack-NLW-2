@@ -4,6 +4,7 @@ import backIcon from '../../assets/images/icons/back.svg'
 import logoImg from '../../assets/images/logo.svg'
 
 import PageHeader from '../../components/PageHeader'
+import TeacherItem from '../../components/TeacherItem'
 import './style.css'
 
 function TeacherList() {
@@ -30,9 +31,10 @@ function TeacherList() {
             </PageHeader>
 
             <main>
-                <article className="teacher-item">
-                    <img src="" alt=""/>
-                </article>
+                <TeacherItem/>
+                <TeacherItem/>
+                <TeacherItem/>
+                <TeacherItem/>
             </main>
            </div>
        </div>
