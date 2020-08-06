@@ -4,7 +4,7 @@
     --color-background: #F0F0F7;
     --color-primary-lighter: #9871F5;
     --color-primary-light: #916BEA;
-    --color-primary: #8257E5;
+    --color-primary: #2d2049;
     --color-primary-dark: #774DD6;
     --color-primary-darker: #6842C2;
     --color-secundary: #04D361;
@@ -48,7 +48,7 @@ body,input, button, textarea{
 }
 
 .container{
-    width: 90wp;
+    width: 90vw;
     max-width: 700px;
 }
 
