@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, FormEvent } from 'react'
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
 import warningIcon from '../../assets/images/icons/warning.svg'
@@ -9,6 +9,13 @@ import './style.css';
 
 function TeacherForm() {
 
+    const [name, setName] = useState("")    
+    const [avatar, setAvatar] = useState("")    
+    const [whatsapp, setWhatsapp] = useState("")    
+    const [bio, setBio] = useState("")    
+    const [subject, setSubject] = useState("")    
+    const [cost, setCost] = useState("")   
+    
 
 
 
@@ -26,6 +33,19 @@ function TeacherForm() {
     }
 
 
+
+
+    function handleCreateClass(e: FormEvent){
+        e.preventDefault()
+        console.log({
+            name,
+            avatar,
+            whatsapp,
+            bio,
+            cost,
+            subject        })
+    }
+
     return (
         <div>
             <div id="page-teacher-form" className="container">
@@ -35,13 +55,35 @@ function TeacherForm() {
                 />
 
                 <main>
+                    <form action="" onSubmit={handleCreateClass}>
                     <fieldset>
                         <legend>Seus dados</legend>
 
-                        <Input name="name" label="Nome completo" />
-                        <Input name="avatar" label="Avatar" />
-                        <Input name="whatsapp" label="Whatsapp" />
-                        <Textarea name="bio" label="Biografia" />
+                        <Input 
+                            name="name" 
+                            label="Nome completo" 
+                            value={name} 
+                            onChange={(e) => {setName(e.target.value)}}
+                        />
+
+                        <Input 
+                            name="avatar" 
+                            label="Avatar" 
+                            value={avatar}
+                            onChange={(e) => {setAvatar(e.target.value)}}
+                        />
+                        <Input 
+                            name="whatsapp" 
+                            label="Whatsapp"
+                            value={whatsapp}
+                            onChange={(e) => {setWhatsapp(e.target.value)}}
+                        />
+                        <Textarea 
+                            name="bio" 
+                            label="Biografia" 
+                            value={bio}
+                            onChange={(e) => setBio(e.target.value)}
+                        />
 
                     </fieldset>
 
@@ -51,6 +93,8 @@ function TeacherForm() {
                         <Select
                             name="subject"
                             label="Matéria"
+                            value={subject}
+                            onChange={(e) => {setSubject(e.target.value)}}
                             options={[
                                 { value: 'Artes', label: 'Artes' },
                                 { value: 'Biologia', label: 'Biologia' },
@@ -61,7 +105,13 @@ function TeacherForm() {
 
                             ]}
                         />
-                        <Input name="cost" label="Custo da sua hora por aula" />
+
+                        <Input 
+                            name="cost" 
+                            label="Custo da sua hora por aula" 
+                            value={cost}
+                            onChange={(e) => {setCost(e.target.value)}}
+                        />
 
                     </fieldset>
 
@@ -106,10 +156,11 @@ function TeacherForm() {
                             Importante! <br />
                             Preencha todos os dados
                         </p>
-                        <button type="button">
+                        <button type="submit">
                             Salvar cadastro
                         </button>
                     </footer>
+                    </form>
                 </main>
             </div>
         </div>
