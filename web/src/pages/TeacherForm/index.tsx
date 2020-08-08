@@ -6,6 +6,7 @@ import Textarea from '../../components/Textarea';
 import Select from '../../components/Select';
 
 import './style.css';
+import api from '../../services/api';
 
 function TeacherForm() {
 
@@ -47,15 +48,24 @@ function TeacherForm() {
 
     function handleCreateClass(e: FormEvent){
         e.preventDefault()
-        console.log({
+
+
+        api.post('classes', {
             name,
             avatar,
             whatsapp,
             bio,
-            cost,
             subject,
-            scheduleItems
+            cost: Number(cost),
+            schedule: scheduleItems
+        }).then(() => {
+            alert('Cadastro realizado com sucesso!')
+        }).catch(() => {
+            alert("Erro no cadastro!")
         })
+
+
+       
     }
 
     return (
