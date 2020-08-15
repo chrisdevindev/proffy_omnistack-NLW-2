@@ -17,6 +17,13 @@ function TeacherItem() {
                     <Text style={styles.subject}>Programação</Text>
                 </View>
             </View>
+
+            <Text style={styles.bio}>
+                Lover of technology and programming. 
+                I’m currently working as Full Stack developer on @TecNorth and 
+                I helping young aspirants in the programming world at @DevInDev.br I'm be specializing in 
+                ReactJs, React-Native and NodeJS.
+            </Text>
         </View>
     )
 }
