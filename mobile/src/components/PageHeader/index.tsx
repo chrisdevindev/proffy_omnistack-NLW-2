@@ -26,11 +26,12 @@ const PageHeader: React.FC<PageHeaderProps> = ( {title} ) =>{
     return (
         <View style={styles.container}>
             <View style={styles.topBar}>
+                
                 <BorderlessButton onPress={handleGoBack}>
-                    <Image source={backIcon} resizeMode='contain'/>
+                    <Image source={backIcon} style={styles.arrow} resizeMode='contain'/>
                 </BorderlessButton>
 
-                <Image source={logoImage} resizeMode='contain' />
+                <Image source={logoImage} style={styles.logo} resizeMode='contain' />
             </View>
 
             <Text style={styles.title}>
