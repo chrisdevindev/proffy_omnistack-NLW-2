@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native'
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#8257E5',
+        backgroundColor: '#2d2049',
         justifyContent: 'center',
         padding: 40
     },
@@ -13,10 +13,11 @@ const styles = StyleSheet.create({
     },
     title:{
         fontFamily: 'Archivo_700Bold',
+        marginTop: 36,
         color: '#fff',
-        fontSize: 32,
+        fontSize: 36,
         lineHeight: 37,
-        maxWidth: 180,
+        maxWidth: 200,
     },
     description:{
         marginTop: 24,
