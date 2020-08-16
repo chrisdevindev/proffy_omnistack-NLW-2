@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
 
     container:{ 
-        padding: 20,
+        padding: 25,
         backgroundColor: '#8257e5'
     },
     arrow:{
@@ -19,6 +19,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between'
      },
+
+     header:{
+        flexDirection: 'row',
+        alignItems:"center",
+        justifyContent: "space-between"
+     },
+
+
      title:{
          fontFamily: "Archivo_700Bold",
          color: '#fff',

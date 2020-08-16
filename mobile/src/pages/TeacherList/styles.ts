@@ -7,6 +7,52 @@ const styles = StyleSheet.create({
     },
     teacherList:{
         marginTop: -35
+    },
+
+    searchForm:{
+        marginBottom: 30
+    },
+
+    label:{
+        color: '#d4c2ff',
+        fontFamily: 'Poppins_400Regular'
+    },
+
+    filterIcon:{
+        marginRight: 20
+    },
+    
+    inputGroup:{
+        flexDirection: "row",
+        justifyContent: "space-between",
+    },
+
+    inputBlock:{
+        width: '48%'
+    },
+
+    input:{
+        height: 54,
+        backgroundColor: '#fff',
+        borderRadius: 8,
+        justifyContent: 'center',
+        paddingHorizontal: 16,
+        marginTop: 4,
+        marginBottom: 16
+    },
+
+    submitButton:{
+        backgroundColor: '#04d361',
+        height: 56,
+        borderRadius: 8,
+        flexDirection:'row',
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    submitButtonText:{
+        color:'#fff',
+        fontFamily: 'Archivo_700Bold',
+        fontSize: 16
     }
 })
 export default styles
