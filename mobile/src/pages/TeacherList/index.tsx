@@ -35,9 +35,10 @@ function TeacherList() {
             }
         })
 
-        console.log(response.data)
-         
+        setIsFilterVisible(false)
+        
         setTeachers(response.data)
+
     }
 
 
