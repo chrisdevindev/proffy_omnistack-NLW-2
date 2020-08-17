@@ -8,42 +8,53 @@ import whatsappIcon from '../../assets/images/icons/whatsapp.png'
 
 import styles from './style'
 
-function TeacherItem() {
+export interface Teacher {
+    id: number
+    avatar: string
+    bio: string
+    cost: number
+    name: string
+    subject: string
+    whatsapp: string
+}
+
+interface TeacherItemProps {
+    teacher: Teacher
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
     return (
         <View style={styles.container}>
             <View style={styles.profile}>
                 <Image
                     style={styles.avatar}
-                    source={{ uri: 'https://github.com/ccastro01.png' }}
+                    source={{ uri: teacher.avatar }}
                 />
 
                 <View style={styles.profileInfo}>
-                    <Text style={styles.name}>Christian Castro</Text>
-                    <Text style={styles.subject}>Programação</Text>
+                    <Text style={styles.name}>{teacher.name}</Text>
+                    <Text style={styles.subject}>{teacher.subject}</Text>
                 </View>
             </View>
 
             <Text style={styles.bio}>
-                Lover of technology and programming. 
-                I’m currently working as Full Stack developer on @TecNorth and 
-                I helping young aspirants in the programming world at @DevInDev.br I'm be specializing in 
-                ReactJs, React-Native and NodeJS.
+                {teacher.bio}
             </Text>
 
             <View style={styles.footer}>
                 <Text style={styles.price}>
                     Preço/hora{'  '}
-                    <Text style={styles.priceValue}>R$ 100,00</Text>
+                    <Text style={styles.priceValue}>{teacher.cost}</Text>
                 </Text>
 
                 <View style={styles.buttonsContainer}>
                     <RectButton style={[styles.favoriteButton, styles.favorited]}>
-                        <Image source={unfavoriteIcon}/>
+                        <Image source={unfavoriteIcon} />
                     </RectButton>
 
                     <RectButton style={styles.contactButton}>
-                        <Image source={whatsappIcon}/>
-                        <Text style={styles.contactButtonText}>Entrar em contato</Text> 
+                        <Image source={whatsappIcon} />
+                        <Text style={styles.contactButtonText}>Entrar em contato</Text>
                     </RectButton>
                 </View>
             </View>

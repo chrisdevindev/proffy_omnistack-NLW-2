@@ -3,7 +3,7 @@ import { View, Text } from 'react-native'
 import { ScrollView, TextInput, BorderlessButton, RectButton } from 'react-native-gesture-handler'
 import { Feather } from '@expo/vector-icons'
 
-import TeacherItem from '../../components/TeacherItem'
+import TeacherItem, { Teacher } from '../../components/TeacherItem'
 import PageHeader from '../../components/PageHeader'
 
 import styles from './styles'
@@ -108,13 +108,10 @@ function TeacherList() {
                     paddingBottom: 16
                 }}
             >
-                {teachers.map(teacher => {
-                    return <TeacherItem/>
+                {teachers.map((teacher: Teacher) => {
+                    return <TeacherItem key={teacher.id} teacher={teacher}/>
                 })}
-                <TeacherItem />
-                <TeacherItem />
-                <TeacherItem />
-                <TeacherItem />
+
             </ScrollView>
         </View>
 
