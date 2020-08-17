@@ -40,7 +40,7 @@ function TeacherList() {
         setTeachers(response.data)
 
     }
-
+    
 
     return (
         <View style={styles.container}>

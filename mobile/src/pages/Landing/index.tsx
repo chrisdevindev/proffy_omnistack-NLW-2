@@ -49,7 +49,7 @@ function Landing() {
                     style={[styles.button, styles.buttonPrimary]}
                 >
                     <Image source={studyIcon} />
-                    <Text style={styles.buttonText}>Estudar</Text>
+                    <Text style={styles.buttonText}>Estudar</Text> 
                 </RectButton>
 
                 <RectButton
