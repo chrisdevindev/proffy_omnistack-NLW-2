@@ -9,6 +9,7 @@ import whatsappIcon from '../../assets/images/icons/whatsapp.png'
 
 import styles from './style'
 import { useAsyncStorage } from '@react-native-community/async-storage'
+import api from '../../services/api'
 
 export interface Teacher {
     id: number
@@ -31,6 +32,11 @@ const TeacherItem: React.FC<TeacherItemProps> = ({ teacher, favorited }) => {
 
 
     function handleLinkToWhatsapp() {
+        api.post('connections', {
+            user_id: teacher.id,
+        })
+
+
         Linking.openURL(`whatsapp://send?phone=${teacher.whatsapp}`)
     }
 
