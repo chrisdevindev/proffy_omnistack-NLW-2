@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState} from 'react'
 import { View, Text } from 'react-native'
 import { ScrollView, TextInput, BorderlessButton, RectButton } from 'react-native-gesture-handler'
 import { Feather } from '@expo/vector-icons'
@@ -20,8 +20,7 @@ function TeacherList() {
     const [time, setTime] = useState('')
     const [favorite, setFavorites] = useState<number[]>([])
 
-
-    useEffect(() => {
+    function loadFavorites(){
         AsyncStorage.getItem('favorites').then(response =>{
             if(response){
                 const favoritedTeachers = JSON.parse(response)
@@ -32,7 +31,8 @@ function TeacherList() {
                 setFavorites(favoritedTeachersIds)
             }
         })
-    }, [])
+    }
+
 
 
     function handleToggleFilterVisible() {
@@ -40,6 +40,9 @@ function TeacherList() {
     }
 
     async function handleFilterSubmit(){
+        loadFavorites()
+
+
         const response = await api.get('classes', {
             params:{
                 subject,
@@ -128,7 +131,7 @@ function TeacherList() {
                             key={teacher.id} 
                             teacher={teacher}
                             favorited={favorite.includes(teacher.id)}
-                            
+
                         />
                     )
                 })}
