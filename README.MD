@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./src/assets/images/logo2.svg"/>
+  <img src="./mobile/src/assets/images/logo2.svg"/>
   <br><br>
 </p>
 
@@ -7,7 +7,7 @@
 <div align="center">
 Acesse os Readmes com passo a passo, divididos em Front-end, Back-end e Mobile:  <br><br>
 <div>
-  <img src="./src/assets/images/Group.png"/>
+  <img src="./mobile/src/assets/images/Group.png"/>
 </div>
 <br><br>
 
