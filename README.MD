@@ -22,7 +22,7 @@
 
 - [Sobre o Projeto](#-sobre-o-projeto)
 - [Tecnologias utilizadas](#-tecnologias-utilizadas)
-- [Executar na sua máquina](#-Executar-na-sua-máquina)
+- [Executar na sua máquina](#-executar-na-sua-máquina)
 - [Licença](#-licença)
 <br><br>
 ## 💡 Sobre o Projeto
