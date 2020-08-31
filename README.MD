@@ -47,7 +47,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 <br><br>
 
 
-## 📥 Executar na usa máquina
+## 📥 Executar na sua máquina
 
 - Clonar Repositório: `git clone https://github.com/CCastro01/proffy_omnistack-NLW-2`
 
