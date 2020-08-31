@@ -3,9 +3,9 @@
   <br><br>
 </p>
 
-<h1 align="center">Uma plataforma online para professores e estudantes</h1> 
+<h1 align="center">Sua plataforma de estudos online</h1> 
 <div align="center">
-Acesse os Readmes com passo a passo, divididos em Front-end, Back-end e Mobile:  <br><br>
+<br><br>
 <div>
   <img src="./mobile/src/assets/images/Group.png"/>
 </div>
